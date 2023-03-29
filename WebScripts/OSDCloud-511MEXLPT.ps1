@@ -17,4 +17,4 @@ Import-Module OSD -Force
 
 #Start OSDCloud ZTI the RIGHT way
 Write-Host -ForegroundColor Green "Start OSDCloud"
-Start-OSDCloud -ZTI -OSLanguage en-us -OSName 'Windows 11 22H2 x64' -OSEdition Enterprise -OSLicense Volume -Restart -Manufacturer -Product
+Start-OSDCloud -ZTI -OSLanguage en-us -OSName 'Windows 11 22H2 x64' -OSEdition Enterprise -OSLicense Volume -Restart
