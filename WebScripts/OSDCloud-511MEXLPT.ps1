@@ -7,18 +7,10 @@ if ((Get-MyComputerModel) -match 'Virtual') {
 	Set-DisRes 1600
 }
 
-#Make sure I have the latest OSD Content
-Write-Host -ForegroundColor Green "Updating OSD PowerShell Module"
-Install-Module OSD -Force
-
-Write-Host -ForegroundColor Green "Importing OSD PowerShell Module"
-Import-Module OSD -Force
-
 #Start OSDCloud ZTI the RIGHT way
 Write-Host -ForegroundColor Green "Start OSDCloud"
 try {
-	#Start-OSDCloud -ZTI -OSLanguage en-us -OSName 'Windows 11 22H2 x64' -OSEdition Enterprise -OSLicense Volume -Restart
-	Start-OSDPad -RepoOwner EskimoRuler -RepoName Powershell-OSDCloud -RepoFolder WebScripts
+	Start-OSDCloud -ZTI -OSLanguage es-mx -OSName 'Windows 11 22H2 x64' -OSEdition Enterprise -OSLicense Volume -Restart
 }
 catch {
 	Write-Host "$_"
