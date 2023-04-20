@@ -14,8 +14,7 @@ $OOBEScript = @"
 Start-Transcript -Path (Join-Path "`$env:ProgramData\Microsoft\IntuneManagementExtension\Logs\OSD\" `$Global:Transcript) -ErrorAction Ignore | Out-Null
 
 Write-Host -ForegroundColor DarkGray "Executing Product Key Script"
-#Start-Process PowerShell -ArgumentList "-NoL -C Invoke-WebPSScript https://raw.githubusercontent.com/EskimoRuler/Powershell-OSDCloud/main/OOBE/oobetasks.ps1" -Wait
-Invoke-WebPSScript https://raw.githubusercontent.com/EskimoRuler/Powershell-OSDCloud/main/OOBE/oobetasks.ps1"
+Start-Process PowerShell -ArgumentList "-NoL -C Invoke-WebPSScript https://raw.githubusercontent.com/EskimoRuler/Powershell-OSDCloud/main/OOBE/oobetasks.ps1" -Wait
 
 # Cleanup scheduled Tasks
 Write-Host -ForegroundColor DarkGray "Unregistering Scheduled Tasks"
