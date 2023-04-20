@@ -1,4 +1,4 @@
-Write-Host -ForegroundColor Green "Starting OSDCloud ZTI"
+Write-Host -ForegroundColor Green "Starting 5.11 OSDPad"
 Start-Sleep -Seconds 5
 
 #Change Display Resolution for Virtual Machine
