@@ -8,6 +8,6 @@ Write-Host "Execute Start-OOBEDeploy" -ForegroundColor Green
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Force
 Install-Module OSD -Force -Verbose
 Start-OOBEDeploy
-Restart-Computer -Force
-
+#Restart-Computer -Force
+Start-Sleep -Seconds 30
 Stop-Transcript
