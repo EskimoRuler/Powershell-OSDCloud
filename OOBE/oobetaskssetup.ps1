@@ -13,14 +13,9 @@ $OOBEScript = @"
 `$Global:Transcript = "`$((Get-Date).ToString('yyyy-MM-dd-HHmmss'))-OOBEScripts.log"
 Start-Transcript -Path (Join-Path "`$env:ProgramData\Microsoft\IntuneManagementExtension\Logs\OSD\" `$Global:Transcript) -ErrorAction Ignore | Out-Null
 
-Write-Host -ForegroundColor DarkGray "Installing AutopilotOOBE PS Module"
-Start-Process PowerShell -ArgumentList "-NoL -C Install-Module AutopilotOOBE -Force -Verbose" -Wait
-
-Write-Host -ForegroundColor DarkGray "Installing OSD PS Module"
-Start-Process PowerShell -ArgumentList "-NoL -C Install-Module OSD -Force -Verbose" -Wait
-
-Write-Host -ForegroundColor DarkGray "Executing OOBEDeploy Script fomr OSDCloud Module"
-Start-Process PowerShell -ArgumentList "-NoL -C Start-OOBEDeploy" -Wait
+Write-Host -ForegroundColor DarkGray "Executing Product Key Script"
+#Start-Process PowerShell -ArgumentList "-NoL -C Invoke-WebPSScript https://raw.githubusercontent.com/EskimoRuler/Powershell-OSDCloud/main/OOBE/oobetasks.ps1" -Wait
+Invoke-WebPSScript https://raw.githubusercontent.com/EskimoRuler/Powershell-OSDCloud/main/OOBE/oobetasks.ps1"
 
 # Cleanup scheduled Tasks
 Write-Host -ForegroundColor DarkGray "Unregistering Scheduled Tasks"
