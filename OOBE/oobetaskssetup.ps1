@@ -1,6 +1,4 @@
-﻿# oobetasks.osdcloud.ch
-
-$scriptFolderPath = "$env:SystemDrive\OSDCloud\Scripts"
+﻿$scriptFolderPath = "$env:SystemDrive\OSDCloud\Scripts"
 $ScriptPathOOBE = $(Join-Path -Path $scriptFolderPath -ChildPath "OOBE.ps1")
 $ScriptPathSendKeys = $(Join-Path -Path $scriptFolderPath -ChildPath "SendKeys.ps1")
 
