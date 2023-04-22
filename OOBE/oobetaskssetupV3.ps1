@@ -4,6 +4,10 @@ $scriptFolderPath = "$env:SystemDrive\OSDCloud\Scripts"
 $ScriptPathOOBE = $(Join-Path -Path $scriptFolderPath -ChildPath "OOBE.ps1")
 $ScriptPathSendKeys = $(Join-Path -Path $scriptFolderPath -ChildPath "SendKeys.ps1")
 
+Write-Host "Script Path: [$($scriptFolderPath)]"
+Write-Host "Script Path: [$($ScriptPathOOBE)]"
+Write-Host "Script Path: [$($ScriptPathSendKeys)]"
+
 If (!(Test-Path -Path $scriptFolderPath))
 {
 	New-Item -Path $scriptFolderPath -ItemType Directory -Force | Out-Null
@@ -28,4 +32,4 @@ Stop-Transcript -Verbose | Out-File
 "@
 
 #Out-File -FilePath $ScriptPathOOBE -InputObject $OOBEScript -Encoding ascii
-Write-Host "ScriptPath: [$OOBEScript]"
+Write-Host "ScriptContents: [$OOBEScript]"
