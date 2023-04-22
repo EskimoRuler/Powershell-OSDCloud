@@ -17,8 +17,8 @@ $OOBEScript = @"
 `$Global:Transcript = "`$((Get-Date).ToString('yyyy-MM-dd-HHmmss'))-OOBEScripts.log"
 Start-Transcript -Path (Join-Path "`$env:ProgramData\Microsoft\IntuneManagementExtension\Logs\OSD\" `$Global:Transcript) -ErrorAction Ignore | Out-Null
 
-Write-Host -ForegroundColor DarkGray "Executing Product Key Script"
-Start-Process PowerShell -ArgumentList "-NoL -C Invoke-WebPSScript oobetasks.michaeltheadmin.com" -Wait
+Write-Host -ForegroundColor DarkGray "Executing OOBEDeploy Script fomr OSDCloud Module"
+Start-Process PowerShell -ArgumentList "-NoL -C Start-OOBEDeploy" -Wait
 
 # Cleanup scheduled Tasks
 Write-Host -ForegroundColor DarkGray "Unregistering Scheduled Tasks"
