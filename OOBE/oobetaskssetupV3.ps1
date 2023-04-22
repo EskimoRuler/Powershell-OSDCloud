@@ -28,3 +28,4 @@ Stop-Transcript -Verbose | Out-File
 "@
 
 #Out-File -FilePath $ScriptPathOOBE -InputObject $OOBEScript -Encoding ascii
+Write-Host "ScriptPath: [$OOBEScript]"
