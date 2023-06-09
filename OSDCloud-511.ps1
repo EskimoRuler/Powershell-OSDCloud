@@ -1,4 +1,4 @@
-Write-Host -ForegroundColor Green "Starting 5.11 OSDPad"
+Write-Host -ForegroundColor Green "Starting 5.11 OSDCloud"
 Start-Sleep -Seconds 5
 
 #Change Display Resolution for Virtual Machine
@@ -18,7 +18,8 @@ Import-Module OSD -Force
 Write-Host -ForegroundColor Green "Start OSDCloud"
 try {
 	#Start-OSDCloud -ZTI -OSLanguage en-us -OSName 'Windows 11 22H2 x64' -OSEdition Enterprise -OSLicense Volume -Restart
-	Start-OSDPad -RepoOwner EskimoRuler -RepoName Powershell-OSDCloud -RepoFolder WebScripts
+	#Start-OSDPad -RepoOwner EskimoRuler -RepoName Powershell-OSDCloud -RepoFolder WebScripts
+	Start-OSDCloudGUI -BrandName "FiveElevenOSD" -BrandColor "Orange"
 }
 catch {
 	Write-Host "$_"
