@@ -12,7 +12,7 @@ if ((Get-MyComputerModel) -match 'Virtual') {
 #Install-Module OSD -Force
 
 #Write-Host -ForegroundColor Green "Importing OSD PowerShell Module"
-#Import-Module OSD -Force
+Import-Module OSD -Force
 
 #Start OSDCloud ZTI the RIGHT way
 Write-Host -ForegroundColor Green "Start OSDCloud"
