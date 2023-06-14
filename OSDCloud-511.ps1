@@ -1,4 +1,4 @@
-Write-Host -ForegroundColor Green "Starting 5.11 OSDCloud"
+Write-Host -ForegroundColor Green "Starting 5.11 OSDCloud#"
 Start-Sleep -Seconds 5
 
 #Change Display Resolution for Virtual Machine
@@ -8,11 +8,11 @@ if ((Get-MyComputerModel) -match 'Virtual') {
 }
 
 #Make sure I have the latest OSD Content
-Write-Host -ForegroundColor Green "Updating OSD PowerShell Module"
-Install-Module OSD -Force
+#Write-Host -ForegroundColor Green "Updating OSD PowerShell Module"
+#Install-Module OSD -Force
 
-Write-Host -ForegroundColor Green "Importing OSD PowerShell Module"
-Import-Module OSD -Force
+#Write-Host -ForegroundColor Green "Importing OSD PowerShell Module"
+#Import-Module OSD -Force
 
 #Start OSDCloud ZTI the RIGHT way
 Write-Host -ForegroundColor Green "Start OSDCloud"
